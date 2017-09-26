@@ -16,8 +16,7 @@ RUN npm install -g protractor@5.1.2 minimist@1.2.0 && \
     apt-get clean && \
     rm ${CHROME_PACKAGE} && \
     mkdir /protractor
-COPY protractor.sh /
-COPY environment /etc/sudoers.d/
+COPY protractor.sh /protractor.sh
 # Fix for the issue with Selenium, as described here:
 # https://github.com/SeleniumHQ/docker-selenium/issues/87
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null SCREEN_RES=1280x1024x24
